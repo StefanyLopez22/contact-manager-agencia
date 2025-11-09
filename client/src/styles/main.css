@@ -1,0 +1,442 @@
+/* Variables CSS */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #3498db;
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --light-bg: #f8f9fa;
+  --dark-bg: #2c3e50;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos generales */
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Section */
+.header-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Statistics Cards */
+.stat-card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-card .card-body {
+  padding: 1.5rem;
+}
+
+.stat-card .card-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stat-card small {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  opacity: 0.8;
+  margin-left: 1rem;
+}
+
+/* Contact Cards */
+.contact-card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-card .card-header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 1.25rem;
+}
+
+.contact-card .card-body {
+  padding: 1.5rem;
+}
+
+.contact-avatar {
+  width: 70px;
+  height: 70px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin: 0 auto 1rem;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  border: 3px solid white;
+}
+
+.contact-info {
+  margin-top: 1rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.info-item i {
+  width: 20px;
+  margin-right: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.info-item span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Form Styles */
+.form-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.form-card .card-header {
+  padding: 1.5rem 2rem;
+  border: none;
+}
+
+.bg-gradient-primary {
+  background: var(--gradient-primary) !important;
+}
+
+.form-card .card-body {
+  padding: 2rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.form-control.is-valid {
+  border-color: var(--success-color);
+}
+
+.form-control.is-invalid {
+  border-color: var(--danger-color);
+}
+
+.invalid-feedback {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.valid-feedback {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-outline-primary:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.btn-outline-danger {
+  border: 2px solid var(--danger-color);
+  color: var(--danger-color);
+}
+
+.btn-outline-danger:hover {
+  background: var(--danger-color);
+  transform: translateY(-2px);
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-spinner {
+  text-align: center;
+  color: white;
+}
+
+.loading-spinner .spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Global Alerts */
+.global-alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  min-width: 300px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--shadow-lg);
+  animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Empty State */
+.empty-state {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.empty-state i {
+  opacity: 0.7;
+}
+
+/* Badge para contador */
+.badge.bg-light {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Mejora para botones de acción */
+.btn-group .btn {
+  border-radius: 8px !important;
+  margin: 0 2px;
+}
+
+/* Efectos hover mejorados para tarjetas */
+.contact-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal de confirmación personalizado */
+.modal-content {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-footer {
+  border-top: 1px solid #eee;
+  background: #f8f9fa;
+  border-radius: 0 0 15px 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-section {
+    padding: 1.5rem;
+  }
+  
+  .header-section h1 {
+    font-size: 1.5rem;
+  }
+  
+  .stat-card .card-body {
+    padding: 1rem;
+  }
+  
+  .stat-card .card-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  .contact-card .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
+}
+/* Estilos para el contador de dígitos del teléfono */
+.phone-counter {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  text-align: right;
+  font-weight: 500;
+}
+
+.phone-counter .counter {
+  font-weight: bold;
+}
+
+.phone-counter .max {
+  color: #6c757d;
+}
+
+.phone-counter .text-success {
+  color: #198754 !important;
+}
+
+.phone-counter .text-warning {
+  color: #ffc107 !important;
+}
+
+.phone-counter .text-danger {
+  color: #dc3545 !important;
+}
+
+/* Mejora el texto de ayuda */
+.form-text {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+}
+
+/* Posicionamiento relativo para el contador */
+.position-relative {
+  position: relative;
+}
+
+/* Estilo para inputs con validación mejorada */
+.form-control:valid {
+  border-color: #198754;
+}
+
+.form-control:invalid {
+  border-color: #dc3545;
+}
+
+/* Contador visual en tiempo real */
+.counter-badge {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  color: #6c757d;
+  pointer-events: none;
+}

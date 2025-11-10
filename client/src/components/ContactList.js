@@ -1,3 +1,4 @@
+//Lista de contactos
 import ContactCard from './ContactCard.js';
 
 export default class ContactList {

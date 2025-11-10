@@ -1,3 +1,4 @@
+//servicios promises
 const API_BASE_URL = 'https://contact-manager-api-wwhr.onrender.com/api';
 const fetchAPI = (endpoint, options = {}) => {
   return new Promise(async (resolve, reject) => {
@@ -28,25 +29,25 @@ export const contactService = {
   getContacts: () => {
     return fetchAPI('/contacts');
   },
-
+//P: obetener todos los contactos
   getContact: (id) => {
     return fetchAPI(`/contacts/${id}`);
   },
-
+//P: crear contacto nuevo
   createContact: (contactData) => {
     return fetchAPI('/contacts', {
       method: 'POST',
       body: JSON.stringify(contactData)
     });
   },
-
+//P: actualizar
   updateContact: (id, contactData) => {
     return fetchAPI(`/contacts/${id}`, {
       method: 'PUT',
       body: JSON.stringify(contactData)
     });
   },
-
+//P: eliminar
   deleteContact: (id) => {
     return fetchAPI(`/contacts/${id}`, {
       method: 'DELETE'

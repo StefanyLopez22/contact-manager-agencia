@@ -1,3 +1,4 @@
+//tarjeta individual de contacto
 export default class ContactCard {
   constructor(contact, onEdit, onDelete) {
     this.contact = contact;

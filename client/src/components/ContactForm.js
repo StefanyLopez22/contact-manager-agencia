@@ -1,3 +1,4 @@
+//formulario de crear / editar
 export default class ContactForm {
   constructor(containerId, onSubmit, onCancel, initialData = null) {
     this.container = document.getElementById(containerId);

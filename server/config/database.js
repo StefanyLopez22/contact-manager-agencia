@@ -1,3 +1,4 @@
+//Conexión MongoDB Atlas
 const mongoose = require('mongoose');
 
 const connectDB = () => {
@@ -13,12 +14,12 @@ const connectDB = () => {
       socketTimeoutMS: 45000,
     })
     .then(() => {
-      console.log('✅ CONECTADO a MongoDB Atlas');
-      console.log('📊 Base de datos:', mongoose.connection.name);
+      console.log('CONECTADO a MongoDB Atlas');
+      console.log(' Base de datos:', mongoose.connection.name);
       resolve();
     })
     .catch((error) => {
-      console.error('❌ ERROR de conexión a MongoDB:', error.message);
+      console.error('ERROR de conexión a MongoDB:', error.message);
       reject(error);
     });
   });

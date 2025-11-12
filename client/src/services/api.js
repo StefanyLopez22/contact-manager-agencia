@@ -1,4 +1,4 @@
-//servicios promises
+//servicios promises, conexion con el bckend
 const API_BASE_URL = 'https://contact-manager-api-wwhr.onrender.com/api';
 const fetchAPI = (endpoint, options = {}) => {
   return new Promise(async (resolve, reject) => {

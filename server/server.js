@@ -20,7 +20,7 @@ app.use('/api/contacts', require('./routes/contacts'));
 // Ruta de información
 app.get('/', (req, res) => {
   res.json({ 
-    message: '🏢 API de Gestión de Contactos - MONGODB ATLAS',
+    message: ' API de Gestión de Contactos - MONGODB ATLAS',
     version: '1.0.0',
     database: 'MongoDB Atlas',
     status: '🟢 Funcionando correctamente'
@@ -61,7 +61,7 @@ app.use('*', (req, res) => {
 
 // Manejo global de errores
 app.use((error, req, res, next) => {
-  console.error('🔥 Error global no manejado:', error);
+  console.error(' Error global no manejado:', error);
   res.status(500).json({
     success: false,
     message: 'Error interno del servidor',
@@ -75,7 +75,7 @@ console.log('🚀 Iniciando servidor de Gestión de Contactos...');
 connectDB()
   .then(() => {
     const server = app.listen(PORT, () => {
-      console.log('\n🎉 ====================================');
+      console.log('\n ====================================');
       console.log('   🏢 AGENCIA DE CONTACTOS - BACKEND');
       console.log('   ====================================');
       console.log(`   📡 Servidor: http://localhost:${PORT}`);
@@ -85,11 +85,11 @@ connectDB()
       console.log('   ====================================\n');
       
       console.log('📋 Endpoints disponibles:');
-      console.log(`   👉 GET  http://localhost:${PORT}/ - Información API`);
-      console.log(`   👉 GET  http://localhost:${PORT}/api/contacts - Todos los contactos`);
-      console.log(`   👉 POST http://localhost:${PORT}/api/contacts - Crear contacto`);
-      console.log(`   👉 PUT  http://localhost:${PORT}/api/contacts/:id - Actualizar contacto`);
-      console.log(`   👉 DEL  http://localhost:${PORT}/api/contacts/:id - Eliminar contacto\n`);
+      console.log(`    GET  http://localhost:${PORT}/ - Información API`);
+      console.log(`    GET  http://localhost:${PORT}/api/contacts - Todos los contactos`);
+      console.log(`    POST http://localhost:${PORT}/api/contacts - Crear contacto`);
+      console.log(`    PUT  http://localhost:${PORT}/api/contacts/:id - Actualizar contacto`);
+      console.log(`    DEL  http://localhost:${PORT}/api/contacts/:id - Eliminar contacto\n`);
     });
 
     // Manejo graceful de cierre

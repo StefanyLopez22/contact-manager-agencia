@@ -5,7 +5,7 @@ const connectDB = () => {
   return new Promise((resolve, reject) => {
     const mongoURI = process.env.MONGODB_URI;
     
-    console.log('🔄 Conectando a MongoDB Atlas...');
+    console.log('Conectando a MongoDB Atlas...');
     
     mongoose.connect(mongoURI, {
       useNewUrlParser: true,

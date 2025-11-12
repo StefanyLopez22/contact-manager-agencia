@@ -1,4 +1,4 @@
-//COMPONENTE principal
+//COMPONENTE principal de react
 class App {
   constructor() {
     this.contacts = [];

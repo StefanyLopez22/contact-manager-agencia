@@ -1,4 +1,4 @@
-//RUTAS API REST
+
 const express = require('express');
 const router = express.Router();
 const Contact = require('../models/Contact');
@@ -27,35 +27,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET /api/contacts/:id - Obtener UN contacto por ID
-router.get('/:id', async (req, res) => {
-  try {
-    const contactId = req.params.id;
-    console.log(`Solicitando contacto con ID: ${contactId}`);
-    
-    const contact = await Contact.findById(contactId);
-    
-    if (!contact) {
-      return res.status(404).json({
-        success: false,
-        message: 'Contacto no encontrado'
-      });
-    }
-    
-    console.log(`Contacto encontrado: ${contact.nombre}`);
-    res.json({
-      success: true,
-      data: contact
-    });
-  } catch (error) {
-    console.error('Error al buscar contacto:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Error al buscar el contacto',
-      error: error.message
-    });
-  }
-});
 
 // POST /api/contacts - Crear NUEVO contacto
 router.post('/', async (req, res) => {
